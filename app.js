@@ -38,6 +38,7 @@ const dic2023Span = document.getElementById("dic2023");
 const selectYear = document.getElementById("selectYear"); // Cambiado de value a selectYear
 const paymentHistory2023 = document.getElementById("paymentHistory2023");
 const paymentHistory2024 = document.getElementById("paymentHistory2024");
+var loggedIn = true
 
 // Definición de la función updatePaymentHistory fuera del ámbito del evento submit
 function updatePaymentHistory() {
@@ -61,7 +62,6 @@ function updatePaymentHistory() {
             oct2023Span.textContent = data[indice].oct2023;
             nov2023Span.textContent = data[indice].nov2023;
             dic2023Span.textContent = data[indice].dic2023;
-
             ene2024Span.textContent = data[indice].ene2024;
             feb2024Span.textContent = data[indice].feb2024;
             mar2024Span.textContent = data[indice].mar2024;
@@ -81,10 +81,13 @@ function updatePaymentHistory() {
                 paymentHistory2023.style.display = "block";
                 paymentHistory2024.style.display = "none";
                 console.log("Selecion 2023");
+                console.log(dic2023);
+
             } else if (selectYear.value === "2024") {
                 paymentHistory2023.style.display = "none";
                 paymentHistory2024.style.display = "block";
-                console.log("Selecion 2024");
+                console.log("Selecion 2024")
+                console.log(ene2024);
             } else {
                 paymentHistory2023.style.display = "none";
                 paymentHistory2024.style.display = "none";
@@ -134,7 +137,10 @@ formulario.addEventListener("submit", (e) => {
                 tag6Span.textContent = tag6
                 statusSpan.textContent = status
 
-
+                var homeElement = document.getElementById("home");
+                if (homeElement) {
+                    homeElement.style.display = "none";
+                }
 
                 updatePaymentHistory(); // Llama a la función updatePaymentHistory después de actualizar los datos
             } else {
