@@ -138,7 +138,7 @@ formulario.addEventListener("submit", (e) => {
 
                 updatePaymentHistory(); // Llama a la función updatePaymentHistory después de actualizar los datos
             } else {
-                console.log("Usuario o contraseña incorrectos");
+                alert("Usuario o contraseña incorrectos");
             }
         })
         .catch((error) => {
