@@ -20,8 +20,8 @@ body {
 }
 
 .contenedor {
-    width: 90%;
-    max-width: 800px;
+    width: 100%;
+    max-width: 450px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: rgb(52 167 241 / 32%) 1px 20px 20px 0px;
@@ -181,7 +181,7 @@ button svg {
 
 .form-select {
     font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     color: #333;
     background-color: #f8f9fa; /* Color de fondo */
     border: 1px solid #ced4da; /* Borde */
@@ -189,7 +189,7 @@ button svg {
     padding: 12px 16px; /* Espaciado interno */
     cursor: pointer; /* Cursor de puntero al pasar por encima */
     transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Transiciones suaves */
-    width: 300px; /* Ancho del selector */
+    width: 350px; /* Ancho del selector */
     margin-right: 10px; /* Margen derecho */
     box-sizing: border-box; /* La anchura y altura incluyen el padding y el borde */
 }
@@ -212,4 +212,71 @@ button svg {
 .form-select:disabled {
     opacity: 0.5; /* Opacidad reducida para opciones deshabilitadas */
     cursor: not-allowed; /* Cursor no permitido */
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.columna-izquierda2,
+.columna-derecha2 {
+	width: 78%; /* Ajusta el ancho según tus necesidades */
+}
+
+.columna-izquierda2 img {
+	max-width: 100%; /* Asegura que la imagen no sobrepase su contenedor */
+	height: auto;
+}
+
+.contenedor3 {
+	display: flex;
+	justify-content: flex-start; /* Alinear las tablas a la izquierda */
+	overflow-x: hidden; /* Evitar el desplazamiento horizontal */
+}
+
+.contenedor3 > div {
+	width: 50%; /* Ancho fijo para cada tabla */
+	margin-right: 0; /* Eliminar el margen derecho */
+
+}
+
+/* Estilos para las tablas */
+.table-custom {
+	border-collapse: collapse;
+	width: 100%; /* Ancho al 100% del contenedor */
+	border: none; /* Elimina los bordes de la tabla */
+}
+
+/* Estilo para resaltar */
+.table-custom-highlight td {
+	background-color: rgba(0, 0, 128, 0);
+	color: rgb(93, 93, 93);
+}
+
+
+.contenedor01 {
+    width: 55%;
+    max-width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgb(52 167 241 / 32%) 1px 20px 20px 0px;
+    background: #fff;
+    min-height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto; /* Centra horizontalmente el contenedor */
+}
+
+
+.contenedor21 {
+    width: 50%;
+    max-width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    min-height: 10vh;
+    display: grid;
+    margin: 20px; /* Agregar margen */
 }
